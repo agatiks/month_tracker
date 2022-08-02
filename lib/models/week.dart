@@ -4,8 +4,8 @@ class Week {
   DateTime startOfWeek;
   late DateTime endOfWeek; //todo: remove late
   int length;
-  List<bool> week;
-  Week(this.startOfWeek, this.week, {this.length = 7}) {
+  List<bool> weekState;
+  Week(this.startOfWeek, this.weekState, {this.length = 7}) {
     endOfWeek = startOfWeek.add(Duration(days: length));
   }
 

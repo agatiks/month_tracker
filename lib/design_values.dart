@@ -34,4 +34,5 @@ class DesignValues {
 
   static const mainColor = Color(0xff76ff03);
   static const radius = 15.0;
+  static const size = 50.0;
 }

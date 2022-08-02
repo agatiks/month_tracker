@@ -13,8 +13,7 @@ class HabitScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
+      body: Padding(
           padding: DesignValues.regularPadding,
           child: Column(
             children: [
@@ -23,7 +22,6 @@ class HabitScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 

@@ -11,19 +11,19 @@ class Calendar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          DaysOfWeek(habit.dateOfStart),
-      /*ListView.builder(
-              shrinkWrap: true,
-                itemCount: (habit.numberOfWeeks),
-                itemBuilder: (BuildContext context, int index) {
-                  final week = habit.getWeek(index);
-                  return WeekItem(week);
-                }
-            ),*/
-        ],
-      ),
+        child: Column(
+          children: [
+            DaysOfWeek(habit.dateOfStart),
+        ListView.builder(
+                shrinkWrap: true,
+                  itemCount: (habit.numberOfWeeks),
+                  itemBuilder: (BuildContext context, int index) {
+                    final week = habit.getWeek(index);
+                    return WeekItem(week);
+                  }
+              ),
+          ],
+        ),
     );
   }
 

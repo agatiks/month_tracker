@@ -20,15 +20,10 @@ class WeekItem extends StatelessWidget {
           week.getDates(),
           style: DesignValues.body2,
         ),
-          ListView.builder(
-            shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-                itemCount: week.length,
-                itemBuilder: (BuildContext context, int index) {
-                print(week.length);
-                  return CircleCheckbox(isChecked: week.week[index]);
-                }),
-
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: week.weekState.map((dayState) => CircleCheckbox(isChecked: dayState)).toList(),
+          )
       ],
     );
   }

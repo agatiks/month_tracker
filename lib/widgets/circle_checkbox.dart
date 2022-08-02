@@ -11,7 +11,7 @@ class CircleCheckbox extends StatefulWidget {
   const CircleCheckbox({Key? key,
     this.color = DesignValues.mainColor,
     this.isChecked = false,
-    this.size = 30,
+    this.size = 40,
   }) : super(key: key);
 
   @override
@@ -22,23 +22,26 @@ class _CircleCheckboxState extends State<CircleCheckbox>{
   bool _isChecked = false;
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
     _isChecked = widget.isChecked;
-    return Expanded(
-      child: GestureDetector(
-        onTap: () {
-          setState(() {
-            _isChecked = !_isChecked;
-          });
-        },
-        child: Container(
-          width: widget.size,
-          height: widget.size,
-          decoration: BoxDecoration (
-            color: _isChecked? widget.color: Colors.black,
-            borderRadius: BorderRadius.circular(widget.size / 2),
-            boxShadow: [DesignValues.regularShadow],
-          ),
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _isChecked = !_isChecked;
+        });
+      },
+      child: Container(
+        width: widget.size,
+        height: widget.size,
+        decoration: BoxDecoration (
+          color: _isChecked? widget.color: Colors.black,
+          borderRadius: BorderRadius.circular(widget.size / 2),
+          boxShadow: [DesignValues.regularShadow],
         ),
       ),
     );
