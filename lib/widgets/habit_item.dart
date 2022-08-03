@@ -18,6 +18,7 @@ class HabitItem extends StatelessWidget {
         decoration: BoxDecoration(
           color: habit.category.color,
           borderRadius: BorderRadius.circular(radius),
+          boxShadow: [DesignValues.regularShadow],
         ),
         padding: DesignValues.regularPadding,
         child: ListTile(
