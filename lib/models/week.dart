@@ -1,12 +1,13 @@
 import 'package:intl/intl.dart';
 
 class Week {
-  DateTime startOfWeek;
+  final DateTime startOfWeek;
   late DateTime endOfWeek; //todo: remove late
-  int length;
+  final int numberOfWeek;
+  final int length;
   List<bool> weekState;
-  Week(this.startOfWeek, this.weekState, {this.length = 7}) {
-    endOfWeek = startOfWeek.add(Duration(days: length));
+  Week(this.startOfWeek, this.weekState, this.numberOfWeek, {this.length = 7}) {
+    endOfWeek = startOfWeek.add(Duration(days: length - 1));
   }
 
   String getDates() {

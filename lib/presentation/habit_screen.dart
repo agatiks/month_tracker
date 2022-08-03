@@ -18,6 +18,7 @@ class HabitScreen extends StatelessWidget {
           child: Column(
             children: [
               HabitItem(habit: habit),
+              const SizedBox(height: DesignValues.paddingSmall),
               Calendar(habit),
             ],
           ),

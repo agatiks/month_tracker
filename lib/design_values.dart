@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DesignValues {
+  static const double paddingSmall = 8.0;
+  static const double paddingBig = 16.0;
   static const EdgeInsets regularPadding = EdgeInsets.all(16.0);
   static BoxShadow regularShadow = BoxShadow(
     color: Colors.grey.withOpacity(0.5),

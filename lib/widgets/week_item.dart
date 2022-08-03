@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:month_tracker/design_values.dart';
 import 'package:month_tracker/widgets/circle_checkbox.dart';
@@ -13,17 +14,26 @@ class WeekItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
 
+    return Column(
       children: [
         Text(
           week.getDates(),
           style: DesignValues.body2,
         ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: week.weekState.map((dayState) => CircleCheckbox(isChecked: dayState)).toList(),
-          )
+        const SizedBox(height: DesignValues.paddingSmall),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: week.weekState
+              .map((dayState) => CircleCheckbox(
+                    isChecked: dayState,
+                    onTap: () {
+                      print("${week.length}");
+                    },
+                  ))
+              .toList() + List.generate(7 - week.length, (index) => const CircleCheckbox(isEmpty: true,)),
+        ),
+        const SizedBox(height: DesignValues.paddingSmall),
       ],
     );
   }

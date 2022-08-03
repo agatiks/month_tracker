@@ -3,6 +3,8 @@ import 'package:month_tracker/models/habit_state.dart';
 import 'package:month_tracker/widgets/days_of_week.dart';
 import 'package:month_tracker/widgets/week_item.dart';
 
+import '../design_values.dart';
+
 class Calendar extends StatelessWidget {
   final HabitState habit;
 

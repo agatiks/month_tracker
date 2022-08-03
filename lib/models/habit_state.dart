@@ -31,6 +31,9 @@ class HabitState {
     String endM = DateFormat('MMM').format(dateOfEnd);
     int endY = dateOfEnd.year;
     if(startY == endY) {
+      if (startM == endM) {
+        return '$startM $startY';
+      }
       return '$startM - $endM $endY';
     } else {
       return '$startM $startY - $endM $endY';
@@ -42,8 +45,8 @@ class HabitState {
     DateTime weekStart = dateOfStart.add(Duration(days: start));
     if(index == numberOfWeeks - 1 && length % 7 != 0) {
       int l = length % 7;
-      return Week(weekStart, daysState.getRange(start, start + l).toList(), length: l);
+      return Week(weekStart, daysState.getRange(start, start + l).toList(), index, length: l);
     }
-    return Week(weekStart, daysState.getRange(start, start + 7).toList());
+    return Week(weekStart, daysState.getRange(start, start + 7).toList(), index);
   }
 }

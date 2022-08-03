@@ -10,10 +10,18 @@ class DaysOfWeek extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dates = List.generate(7, (index) => DateFormat('EE').format(dateOfStart.add(Duration(days: index))));
+    final dates = List.generate(
+        7,
+        (index) =>
+            DateFormat('EE').format(dateOfStart.add(Duration(days: index))));
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: dates.map((day) => Text(day, style: DesignValues.body1,)).toList(),
+      children: dates
+          .map((day) => Text(
+                day,
+                style: DesignValues.body1,
+              ))
+          .toList(),
     );
   }
 }
