@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:month_tracker/design_values.dart';
 import 'package:month_tracker/models/habit_state.dart';
 import 'package:month_tracker/widgets/habit_item.dart';
-
-import '../widgets/Calendar.dart';
+import 'package:month_tracker/widgets/Calendar.dart';
 
 class HabitScreen extends StatelessWidget {
   final HabitState habit;
