@@ -50,7 +50,7 @@ class DesignValues {
     color: color,
   );
 
-  static const mainColor = Color(0xff76ff03);
+  static const mainColor = Color(0xff65FF6C);
   static const detailColor = Color(0x00f9f9f9);
   static const radius = 15.0;
   static const size = 50.0;
