@@ -34,7 +34,18 @@ class DesignValues {
     fontSize: bodyFontSize,
   );
 
+  static TextStyle bodyLato24({Color color = Colors.black}) => GoogleFonts.lato(
+    fontSize: 24,
+    color: color,
+  );
+
+  static TextStyle bodyPlayfair24({Color color = Colors.black}) => GoogleFonts.playfairDisplay(
+    fontSize: 24,
+    color: color,
+  );
+
   static const mainColor = Color(0xff76ff03);
+  static const detailColor = Color(0x00f9f9f9);
   static const radius = 15.0;
   static const size = 50.0;
 }
