@@ -44,6 +44,12 @@ class DesignValues {
     color: color,
   );
 
+  static TextStyle bodyPlayfair16({Color color = Colors.black}) => GoogleFonts.playfairDisplay(
+    fontSize: smallFontSize,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+
   static const mainColor = Color(0xff76ff03);
   static const detailColor = Color(0x00f9f9f9);
   static const radius = 15.0;

@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:month_tracker/design_values.dart';
+import 'package:month_tracker/presentation/sign_up_screen.dart';
 import 'package:month_tracker/widgets/button_widget.dart';
 import 'package:month_tracker/widgets/field_widget.dart';
 
@@ -40,7 +41,7 @@ class AuthScreen extends StatelessWidget {
                         ButtonWidget(
                           backgroundColor: Colors.white,
                           text: "Sign up",
-                          onPressed: signUp,
+                          onPressed: () => signUp(context),
                         ),
                         ButtonWidget(
                           backgroundColor: DesignValues.mainColor,
@@ -72,8 +73,11 @@ class AuthScreen extends StatelessWidget {
     );
   }
 
-  signUp() {
-    print("1");
+  void signUp(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(
+      builder: (_) => SignUpScreen(),
+    ));
   }
 
   signInGoogle() {
