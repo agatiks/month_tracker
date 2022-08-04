@@ -1,4 +1,4 @@
-<img src="assets/icon/icon6.png" align="right" width="100" height="100"/>
+<img src="assets/icon/icon6.png" align="right" width="200" height="200"/>
 
 # Habit Tracker
  
